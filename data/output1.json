@@ -1,6 +1,6 @@
 [
   {
-    "name": "Proxima Centauri",
+    "name": "Centauri",
     "latitude": -113.184152,
     "longitude": -83.732973
   },
@@ -20,17 +20,17 @@
     "longitude": -25.651277
   },
   {
-    "name": "Ronaldo",
+    "name": "Ares",
     "latitude": -65.011029,
     "longitude": -19.839776
   },
   {
-    "name": "Ching heng Hanji",
+    "name": "Hanji",
     "latitude": -145.201716,
     "longitude": -73.607734
   },
   {
-    "name": "Kolkata",
+    "name": "Kolt",
     "latitude": 111.613119,
     "longitude": 58.320425
   },
@@ -40,7 +40,7 @@
     "longitude": 12.292685
   },
   {
-    "name": "Pikachu",
+    "name": "Prax",
     "latitude": -41.838099,
     "longitude": 33.15746
   },
@@ -55,7 +55,7 @@
     "longitude": -83.217559
   },
   {
-    "name": "Neymar",
+    "name": "Nemus",
     "latitude": -98.508045,
     "longitude": -37.547009
   },
@@ -65,7 +65,7 @@
     "longitude": 83.309392
   },
   {
-    "name": "Xue Hua Piao Piao",
+    "name": "Piao",
     "latitude": 51.262297,
     "longitude": 14.638508
   },
@@ -85,7 +85,7 @@
     "longitude": 27.945641
   },
   {
-    "name": "Oui Oui Baguette",
+    "name": "Oui",
     "latitude": -53.230399,
     "longitude": -5.492269
   },
@@ -120,7 +120,7 @@
     "longitude": 36.94427
   },
   {
-    "name": "Bing Chilling",
+    "name": "Chill",
     "latitude": 3.385161,
     "longitude": -65.603335
   },
