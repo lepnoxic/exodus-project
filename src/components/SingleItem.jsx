@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const SingleItem = ({ item, children }) => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Initialize count from local storage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+
+    if (existingItem) {
+      setCount(existingItem.count);
+    }
+  }, [item.id]);
 
   const handleIncrement = () => {
     setCount(count + 1);
@@ -46,8 +56,8 @@ const SingleItem = ({ item, children }) => {
         </h2>
         <div className='flex flex-row items-center'>
           <p>
-            Stock : {item.stock} <br />
-            Price : {item.price}
+            Stock: {item.stock} <br />
+            Price: {item.price}
           </p>
           <div className='flex flex-row items-center'>
             <button className='btn btn-error' onClick={handleDecrement}>-</button>
