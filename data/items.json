@@ -1,121 +1,115 @@
 [
     {
         "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "name": "Space Suit",
+        "stock": 10,
+        "price": 1000000,
+        "image": "https://e7.pngegg.com/pngimages/305/137/png-clipart-astronaut-space-suit-drawing-astronaut-comic-book-hand.png"
     },  
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 2,
+        "name": "Toilet Paper",
+        "stock": 0,
+        "price": 30,
+        "image": "https://static.vecteezy.com/system/resources/previews/002/383/145/original/cartoon-illustration-of-toilet-paper-free-vector.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 3,
+        "name": "T-Shirt 2 pieces",
+        "stock": 400,
+        "price": 100,
+        "image": "https://media.istockphoto.com/id/1343641498/vector/white-and-black-t-shirt.jpg?s=612x612&w=0&k=20&c=j_7glkQsvk-kwRKjdaZQGxm2Y1m33LtUr96TW3i7rRE="
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 4,
+        "name": "Space Soap",
+        "stock": 1000,
+        "price": 10,
+        "image": "https://t3.ftcdn.net/jpg/03/33/97/88/360_F_333978844_pqdFBzobZ0SmS4oY9FUpmLtqBDSKOBM4.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 5,
+        "name": "Towel",
+        "stock": 200,
+        "price": 120,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdcw40JrrPXfYSajCPdXUqdSW6tHVEpzTQCg&usqp=CAU"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 6,
+        "name": "First-Aid Kit",
+        "stock": 44,
+        "price": 100,
+        "image": "https://img.freepik.com/premium-vector/first-aid-kit-cartoon-design_579205-35.jpg?w=360"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 7,
+        "name": "Big Gun",
+        "stock": 5,
+        "price": 5,
+        "image": ""
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
+        "id": 8,
+        "name": "Small Gun",
+        "stock": 2,
         "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "image": ""
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 9,
+        "name": "3D Food Printer",
+        "stock": 3,
+        "price": 50000,
+        "image": "https://hackaday.com/wp-content/uploads/2019/04/3dpfood_feat.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
+        "id": 10,
+        "name": "3D Food Cartridge Pack",
+        "stock": 1500,
         "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "image": "https://images.pond5.com/tetra-pack-juice-line-drawing-footage-045205251_iconl.jpeg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "Id": 11,
+        "name": "Jetpack",
+        "stock": 100,
+        "price": 100000,
+        "image": "https://w7.pngwing.com/pngs/299/373/png-transparent-club-penguin-elite-penguin-force-jet-pack-jetpack-joyride-jetpack-club-penguin-flight-vehicle.png"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 12,
+        "name": "Oxygen Tank",
+        "stock": 15,
+        "price":8000 ,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBdXPmoBZGGI0XM7Yke04S1Qtty44rbR6RgQ&usqp=CAU"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 13,
+        "name": "Oximeter",
+        "stock": 5,
+        "Price": 9000 ,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AwIHNT69aUxtez9OMjKLPjUuZB9e0NmAEA&usqp=CAU"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 14,
+        "name": "Candy",
+        "stock": 540,
+        "price":10 ,
+        "image": "https://w0.peakpx.com/wallpaper/574/695/HD-wallpaper-candy-cartoon-on-pik.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 15,
+        "name": "Board Games",
+        "stock":280 ,
+        "price": 300,
+        "image": ""
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
-    },
-    {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
-    }  
+        "id": 16,
+        "name": "Utensils",
+        "stock": 300,
+        "price": 350,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrlflawv81LAFVZxfY-tcGk9OS33abBure3w&usqp=CAU"
+    }
 ]
+

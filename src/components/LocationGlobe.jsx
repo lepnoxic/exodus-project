@@ -1,4 +1,4 @@
-import {useRef,useEffect,useState} from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Globe from 'react-globe.gl';
 
 function LocationGlobe({ width }) {
@@ -77,24 +77,24 @@ function LocationGlobe({ width }) {
     <div>
       <button onClick={handleButtonClick}>Zoom</button>
       <Globe
-    ref={globeEl}
-      globeImageUrl="https://i.imgur.com/lPc26ew.jpeg"
-      labelsData={places}
-      labelLat={d => d.properties.latitude}
-      labelLng={d => d.properties.longitude}
-      labelText={d => d.properties.name}
-      labelSize={d => Math.sqrt(d.properties.pop_max) * 4e-4}
-      labelDotRadius={d => Math.sqrt(d.properties.pop_max) * 4e-4}
-      labelColor={() => 'rgba(255,255,0,0.5)'}
-      labelResolution={5}
-      arcsData={arcsData}
-      arcColor={'color'}
-      arcDashLength={() => Math.random()}
-      arcDashGap={() => Math.random()}
-      arcDashAnimateTime={() => Math.random() * 4000 + 500}
-      width={width}
-      backgroundColor='rgba(0,0,0,0)'
-    />
+        ref={globeEl}
+        globeImageUrl="https://i.imgur.com/lPc26ew.jpeg"
+        labelsData={places}
+        labelLat={d => d.properties.latitude}
+        labelLng={d => d.properties.longitude}
+        labelText={d => d.properties.name}
+        labelSize={d => Math.sqrt(d.properties.pop_max) * 4e-4}
+        labelDotRadius={d => Math.sqrt(d.properties.pop_max) * 4e-4}
+        labelColor={() => 'rgba(255,255,0,0.5)'}
+        labelResolution={5}
+        arcsData={arcsData}
+        arcColor={'color'}
+        arcDashLength={() => Math.random()}
+        arcDashGap={() => Math.random()}
+        arcDashAnimateTime={() => Math.random() * 4000 + 500}
+        width={width}
+        backgroundColor='rgba(0,0,0,0)'
+      />
     </div>
   )
 }
