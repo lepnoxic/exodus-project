@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import LocationGlobe from '../components/LocationGlobe';
+
+const width=window.innerWidth;
 
 const Location = () => {
   return (
     <div>
-        <div>
-            Go to items
-        </div>
+        <LocationGlobe width={width} />
         <NavLink to='/items' >
             <button className='btn' >
                 SAVE
