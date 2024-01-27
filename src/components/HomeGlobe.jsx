@@ -2,6 +2,8 @@ import React, {useRef,useEffect,useState} from 'react';
 import Globe from 'react-globe.gl';
 
 function HomeGlobe({ width }) {
+  const [places, setPlaces] = useState([]);
+  const [arcsData, setArcsData] = useState([]);
 
   const globeE1 = useRef();
   useEffect(() => {
@@ -10,20 +12,37 @@ function HomeGlobe({ width }) {
     globeE1.current.controls().enableRotate = false;
   },[]);
 
-  const N = 20;
-  const arcsData = [...Array(N).keys()].map(() => ({
-    startLat: (Math.random() - 0.5) * 180,
-    startLng: (Math.random() - 0.5) * 360,
-    endLat: (Math.random() - 0.5) * 180,
-    endLng: (Math.random() - 0.5) * 360,
-    color: [['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)], ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]]
-  }));
-
-
-  const [places, setPlaces] = useState([]);
   useEffect(() => {
-    fetch('/data/update.geojson').then(res => res.json())
+    fetch('../../data/ne_110m_top_50_populated_cities.geojson')
+      .then(res => res.json())
       .then(({ features }) => setPlaces(features));
+
+    fetch('../../data/output.json')
+      .then(res => res.json())
+      .then(({ coordinates }) => {
+        const numberOfArcs = 20;
+        const N = coordinates.length;
+
+        const randomIndices = [];
+        while (randomIndices.length < numberOfArcs) {
+          const randomIndex = Math.floor(Math.random() * N);
+          if (!randomIndices.includes(randomIndex)) {
+            randomIndices.push(randomIndex);
+          }
+        }
+
+        const newArcsData = randomIndices.map(index => ({
+          startLat: coordinates[index][0],
+          startLng: coordinates[index][1],
+          endLat: coordinates[(index + 1) % N][0],
+          endLng: coordinates[(index + 1) % N][1],
+          color: [
+            ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)],
+            ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)],
+          ],
+        }));
+        setArcsData(newArcsData);
+      });
   }, []);
 
   return (
