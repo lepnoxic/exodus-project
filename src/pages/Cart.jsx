@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
   return (
-    <div>Cart
+    <div>
     <NavLink to='/location' >
       <button>
-        GO TO LOCATION
+        Confirm
       </button>
     </NavLink>
     </div>
