@@ -1,121 +1,115 @@
 [
     {
         "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "name": "Space Suit",
+        "stock": 10,
+        "price": 1000000,
+        "image": "src/assets/space_suit_real.png"
     },  
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 2,
+        "name": "Toilet Paper",
+        "stock": 0,
+        "price": 30,
+        "image": "src/assets/toilet_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 3,
+        "name": "T-Shirt 2 pieces",
+        "stock": 400,
+        "price": 100,
+        "image": "src/assets/tshirt.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 4,
+        "name": "Space Soap",
+        "stock": 1000,
+        "price": 10,
+        "image": "src/assets/soap_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 5,
+        "name": "Towel",
+        "stock": 200,
+        "price": 120,
+        "image": "src/assets/towel1_real.png"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 6,
+        "name": "First-Aid Kit",
+        "stock": 44,
+        "price": 100,
+        "image": "src/assets/first_aid_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 7,
+        "name": "Portable Battery",
+        "stock": 300,
+        "price": 150,
+        "image": "src/assets/battery1_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
+        "id": 8,
+        "name": "Headphones",
+        "stock": 13,
         "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "image": "src/assets/Untitled.jpeg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 9,
+        "name": "3D Food Printer",
+        "stock": 3,
+        "price": 50000,
+        "image": "src/assets/food_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
+        "id": 10,
+        "name": "3D Food Cartridge Pack",
+        "stock": 1500,
         "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "image": "src/assets/pack_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "Id": 11,
+        "name": "Jetpack",
+        "stock": 100,
+        "price": 100000,
+        "image": "src/assets/jetpack_real.png"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 12,
+        "name": "Oxygen Tank",
+        "stock": 15,
+        "price":8000 ,
+        "image": "src/assets/oxygen_tank_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 13,
+        "name": "Oximeter",
+        "stock": 5,
+        "Price": 9000 ,
+        "image": "src/assets/oximeter_real.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 14,
+        "name": "Candy",
+        "stock": 540,
+        "price":10 ,
+        "image": "src/assets/candy.jpg"
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
+        "id": 15,
+        "name": "Board Games",
+        "stock":280 ,
+        "price": 300,
+        "image": ""
     },
     {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
-    },
-    {
-        "id": 1,
-        "name": "Space Suits",
-        "stock": 54,
-        "price": 1000,
-        "image": "/src/assets/promofinal.webp"
-    }  
+        "id": 16,
+        "name": "Utensils",
+        "stock": 300,
+        "price": 350,
+        "image": "src/assets/utensils1_real.jpg"
+    }
 ]
+
