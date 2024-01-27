@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+useEffect(() => {
+    localStorage.removeItem('cartItems')
+}, []);
 
 const Delivery = () => {
   return (
-    <div>Delivery</div>
+    <div>Thank you for your service</div>
   )
 }
 

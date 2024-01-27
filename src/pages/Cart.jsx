@@ -1,8 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div>Cart
+    <NavLink to='/location' >
+      <button>
+        GO TO LOCATION
+      </button>
+    </NavLink>
+    </div>
   )
 };
 
