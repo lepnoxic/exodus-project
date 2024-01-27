@@ -252,10 +252,10 @@ const Location = () => {
         <p>Package is ready to deliver from <b>{localStorage.getItem('source')}</b></p>
       )}
       {currentMode === 4 && (
-        <p>Package on travel at Mach 3000</p>
+        <p>Package is travelling at Mach 3000</p>
       )}
       {currentMode === 5 && (
-        <p>Package has arriving at <b>{localStorage.getItem('destination')}</b>, get ready to pick it up</p>
+        <p>Package has arrived at <b>{localStorage.getItem('destination')}</b>, get ready to pick it up</p>
       )}
       </div>
       <div className='flex-grow flex justify-center items-center' style={{ flex: '0 0 20%' }}>
