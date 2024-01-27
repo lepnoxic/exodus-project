@@ -1,22 +1,34 @@
 import React, {useRef,useEffect,useState} from 'react';
 import Globe from 'react-globe.gl';
-import locations from '/data/output1.json'
+import locations from '/data/output1.json';
 
 const width=window.innerWidth;
 
 const Location = () => {
   const [places, setPlaces] = useState([]);
+  const [text, setText] = useState('');
   const [arcsData, setArcsData] = useState([]);
   const [currentMode, setCurrentMode] = useState(0);
   const globeEl = useRef();
-  
 
+  let dstlatitude = 100000;
+  let dstlongitude = 100000;
+  let srclatitude;
+  let srclongitude;
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
   useEffect(() => {
     fetch('../../data/ne_110m_top_50_populated_cities.geojson')
       .then(res => res.json())
       .then(({ features }) => setPlaces(features));
   }, []);
+
+  
+
+
 
   const createArcs = (latitude, longitude) => {
     fetch('../../data/output.json')
@@ -70,24 +82,30 @@ const Location = () => {
           ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)],
         ],
       }));
+      srclatitude = top5Locations[index].latitude;
+      srclongitude = top5Locations[index].longitude;
       setArcsData(newArcsData);
-      console.log(top5Locations[0].latitude)
+      console.log(dstlatitude, dstlongitude, srclatitude, srclongitude)
+      localStorage.setItem('srclatitude', srclatitude);
+      localStorage.setItem('srclongitude', srclongitude);
+      localStorage.setItem('dstlatitude', dstlatitude);
+      localStorage.setItem('dstlongitude', dstlongitude);
     });
 };
 
-  const updatePOV = (latitude, longitude) => {
-    const zoom_location = { lat: latitude, lng: longitude, altitude: 0.75 };
-    globeEl.current.pointOfView(zoom_location, 1000);
-  };
 
-  let srclatitude = 100000;
-  let srclongitude = 100000;
+  
+
+  const updatePOV = (refer, latitude, longitude) => {
+    const zoom_location = { lat: latitude, lng: longitude, altitude: 0.75 };
+    refer.current.pointOfView(zoom_location, 1000);
+  };
 
 
   const handleCitySubmit = () => {
-    if (srclatitude == 100000 || srclongitude == 100000) 
+    if (dstlatitude == 100000 || dstlongitude == 100000) 
       return;
-    createArcs(srclatitude, srclongitude);
+    createArcs(dstlatitude, dstlongitude);
     setCurrentMode(1);
   };
 
@@ -99,12 +117,36 @@ const Location = () => {
     }
     const selectedCity = locations[selectedIndex];
     const { latitude, longitude } = selectedCity;
-    updatePOV(latitude, longitude);
-    srclatitude = latitude;
-    srclongitude = longitude;
+    updatePOV(globeEl, latitude, longitude);
+    dstlatitude = latitude;
+    dstlongitude = longitude;
   };
 
+  useEffect(() => {
+    if (currentMode === 1) {
+      // Wait for 10 seconds before changing mode to 2
+      const timeoutId = setTimeout(() => {
+        setCurrentMode(2);
+      }, 3500); 
+      // Cleanup the timeout on component unmount or mode change
+      return () => clearTimeout(timeoutId);
+    }
+  }, [currentMode]);
 
+  useEffect(() => {
+    if (currentMode === 2) {
+      const storedSrcLatitude = localStorage.getItem('srclatitude');
+      const storedSrcLongitude = localStorage.getItem('srclongitude');
+      const storedDstLatitude = localStorage.getItem('dstlatitude');
+      const storedDstLongitude = localStorage.getItem('dstlongitude');
+      // Wait for 10 seconds before changing mode to 2
+      const timeoutId = setTimeout(() => {
+        updatePOV(globeEl, storedSrcLatitude, storedSrcLongitude);
+      }, 3500); 
+      // Cleanup the timeout on component unmount or mode change
+      return () => clearTimeout(timeoutId);
+    }
+  }, [currentMode, srclatitude, srclongitude]);
 
   if (currentMode === 0)
     return (
@@ -155,29 +197,24 @@ const Location = () => {
       </div>
       
     )
-  if (currentMode === 1) 
+
+  if (currentMode === 1) {
+    return (
+        <div className='h-screen w-screen flex items-center justify-center flex-col gap-4'>
+          <p className='font-bold text-4xl'>Payment processing</p>
+          <span className="loading loading-spinner loading-lg"></span>
+          <p>(There is no payment framework)</p>
+        </div>
+        // Wait for 10 seconds then change currentMode to 2
+      )
+  }
+
+  if (currentMode === 2) 
   return (
     <div className="flex flex-row overflow-x-hidden">
-    <div className='absolute flex flex-row items-center h-screen left-[10vw] text-7xl'>
-    <div className='flex flex-row items-center z-[2] gap-5'>
-      <div>
-        Choose your city: 
+      <div className="absolute h-screen flex items-center">
+  
       </div>
-      <select 
-        className="select select-bordered w-full max-w-xs" 
-        onChange={(e) => handleCitySelection(e)}
-        defaultValue="default"
-      >
-        <option value="default" disabled>Select a city</option>
-        {locations.map((item, index) => (
-          <option key={index} value={index}>{item.name}</option>
-        ))}
-      </select>
-      <button className='btn btn-success' onClick={() => handleCitySubmit()}>
-        SUBMIT
-      </button>
-    </div>
-    </div>
       <div className='flex-grow flex justify-center items-center' style={{ flex: '0 0 20%' }}>
       </div>
     <div>
