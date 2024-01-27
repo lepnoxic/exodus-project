@@ -14,14 +14,9 @@ function Home() {
             Company Name
           </div>
           <div className='flex flex-row gap-5'>
-            <NavLink to="/Signup">
-              <button className='btn'>
-                Sign Up
-              </button>
-            </NavLink>
             <NavLink to="/Login">
-              <button className='btn' >
-                Log In
+              <button className='btn btn-primary' >
+                Sign Up | Log In
               </button>
             </NavLink>
           </div>

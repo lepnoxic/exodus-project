@@ -1,11 +1,11 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Home, Login, Signup, Location, Items, Cart } from "./pages";
+import { Home, Login, Location, Items, Cart } from "./pages";
 import ParticlesBackground from "./components/ParticlesBackground";
 
 const App = () => {
   return (
-    <main className='bg-black w-[100vw] h-[100vh]'>
+    <main className='bg-black w-[100vw] h-[100vh] flex flex-col'>
       <div>
         <ParticlesBackground></ParticlesBackground>
       </div>
@@ -14,7 +14,6 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
             <Route path='/location' element={<Location />} />
             <Route path='/items' element={<Items />} />
             <Route path='/cart' element={<Cart />} />
