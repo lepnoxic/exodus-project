@@ -230,11 +230,6 @@
     "longitude": 70.30212
   },
   {
-    "name": "Chengdu",
-    "latitude": -44.721214,
-    "longitude": 35.17739
-  },
-  {
     "name": "Triangulum",
     "latitude": -38.039757,
     "longitude": -59.265557
@@ -243,10 +238,5 @@
     "name": "Abidjan",
     "latitude": 41.830586,
     "longitude": -76.861493
-  },
-  {
-    "name": "Trinity",
-    "latitude": -112.295186,
-    "longitude": -60.25267
   }
 ]

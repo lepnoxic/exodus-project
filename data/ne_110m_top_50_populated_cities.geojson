@@ -2264,55 +2264,6 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Chengdu",
-                "scalerank": 1,
-                "natscale": 300,
-                "labelrank": 1,
-                "featurecla": "Admin-1 capital",
-                "namepar": null,
-                "namealt": null,
-                "diffascii": 0,
-                "nameascii": "Chengdu",
-                "adm0cap": 0,
-                "capalt": null,
-                "capin": null,
-                "worldcity": 0,
-                "megacity": 1,
-                "sov0name": "China",
-                "sov_a3": "CHN",
-                "adm0name": "China",
-                "adm0_a3": "CHN",
-                "adm1name": "Sichuan",
-                "iso_a2": "CN",
-                "note": null,
-                "latitude": -44.721214,
-                "longitude": 35.17739,
-                "changed": 5,
-                "namediff": 0,
-                "diffnote": "Changed scale rank.",
-                "pop_max": 4123000,
-                "pop_min": 3950437,
-                "pop_other": 11622929,
-                "rank_max": 12,
-                "rank_min": 12,
-                "geonameid": 1815286,
-                "meganame": "Chengdu",
-                "ls_name": "Chengdu",
-                "ls_match": 1,
-                "checkme": 0,
-                "min_zoom": 3.0
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -44.721214,
-                    35.17739
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "name": "Triangulum",
                 "scalerank": 2,
                 "natscale": 200,
@@ -2405,55 +2356,6 @@
                 "coordinates": [
                     41.830586,
                     -76.861493
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "Trinity",
-                "scalerank": 2,
-                "natscale": 200,
-                "labelrank": 1,
-                "featurecla": "Admin-0 capital",
-                "namepar": null,
-                "namealt": "Trinity",
-                "diffascii": 0,
-                "nameascii": "Trinity",
-                "adm0cap": 1,
-                "capalt": null,
-                "capin": null,
-                "worldcity": 0,
-                "megacity": 1,
-                "sov0name": "Brazil",
-                "sov_a3": "BRA",
-                "adm0name": "Brazil",
-                "adm0_a3": "BRA",
-                "adm1name": "Distrito Federal",
-                "iso_a2": "BR",
-                "note": null,
-                "latitude": -112.295186,
-                "longitude": -60.25267,
-                "changed": 5,
-                "namediff": 0,
-                "diffnote": "Changed scale rank.",
-                "pop_max": 3716996,
-                "pop_min": 2562963,
-                "pop_other": 1772679,
-                "rank_max": 12,
-                "rank_min": 12,
-                "geonameid": 3469058,
-                "meganame": "Brasglia",
-                "ls_name": "Trinity",
-                "ls_match": 1,
-                "checkme": 0,
-                "min_zoom": 3.7
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -112.295186,
-                    -60.25267
                 ]
             }
         }
