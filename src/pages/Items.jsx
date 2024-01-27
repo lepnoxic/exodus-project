@@ -45,7 +45,15 @@ const Items = () => {
         </div>
         <div className="navbar-center">
           <Marquee className='navbar-centre w-[65vw]'>
-            {/* ... your existing marquee content ... */}
+            We are now delivering to Nemus. With this our services are available throughout the planet.
+            Taurus puts up bounty on alligators.
+            Canis Major distributes meat to avoid pineapple on pizza.
+            Ascella shuts down all its public toilets.
+            Lepus undergoes mass deforestation to promote global warming.
+            Fedora now declared national attire in Kepler.
+            Akola is leading cure research.
+            Hackerman wins Exodus(hopefully)
+            Amogus is the highest rated game on oogleway.
           </Marquee>
         </div>
         <div className="navbar-end">
