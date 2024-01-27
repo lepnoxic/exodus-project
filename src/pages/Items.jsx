@@ -5,6 +5,7 @@ import { SignOutIcon } from '@primer/octicons-react';
 import SingleItem from '../components/SingleItem';
 import jsonData from '/data/items.json';
 import { NavLink } from 'react-router-dom';
+import Marquee from "react-fast-marquee";
 
 const Items = () => {
   return (
@@ -23,7 +24,17 @@ const Items = () => {
             </div>
           </div>
           <div className="navbar-center">
-            <p className="btn btn-ghost text-xl">Announcements Here</p>
+            <Marquee className='navbar-centre w-[65vw]'>
+            We are now delivering to Nemus. With this our services are available throughout the planet.
+            Taurus puts up bounty on alligators.
+            Canis Major distributes meat to avoid pineapple on pizza.
+            Ascella shuts down all its public toilets.
+            Lepus undergoes mass deforestation to promote global warming.
+            Fedora now declared national attire in Kepler.
+            Akola is leading cure research.
+            Hackerman wins Exodus(hopefully)
+            Amogus is the highest rated game on oogleway.
+            </Marquee>
           </div>
           <div className="navbar-end">
             <NavLink to="/cart">
