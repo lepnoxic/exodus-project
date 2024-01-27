@@ -73,13 +73,7 @@ const Items = () => {
       </div>
       <div className="grow rounded-b-lg bg-slate-800 p-3 flex flex-row flex-wrap gap-4 justify-center overflow-scroll">
         {sortedData.map((item, index) => (
-          <SingleItem key={index} item={item}>
-            <div className='flex flex-row items-center'>
-              <button className='btn btn-error'>-</button>
-              <p>0</p>
-              <button className='btn btn-success'>+</button>
-            </div>
-          </SingleItem>
+          <SingleItem key={index} item={item} />
         ))}
       </div>
     </div>
