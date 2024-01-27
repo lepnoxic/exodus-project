@@ -1,0 +1,60 @@
+import React from 'react';
+import { SortDescIcon } from '@primer/octicons-react';
+import { FaCartShopping } from 'react-icons/fa6';
+import { SignOutIcon } from '@primer/octicons-react';
+import SingleItem from '../components/SingleItem';
+import jsonData from '/data/items.json';
+import { NavLink } from 'react-router-dom';
+
+const Items = () => {
+  return (
+    <div className=" w-screen h-screen flex flex-col p-3">
+        <div className="navbar bg-base-100 rounded-t-lg">
+          <div className="navbar-start">
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                <SortDescIcon size={24} />
+              </div>
+              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><p>By Name</p></li>
+                <li><p>By Availability</p></li>
+                <li><p>By Price</p></li>
+              </ul>
+            </div>
+          </div>
+          <div className="navbar-center">
+            <p className="btn btn-ghost text-xl">Announcements Here</p>
+          </div>
+          <div className="navbar-end">
+            <NavLink to="/cart">
+              <button className="btn bg-white btn-circle">
+                <FaCartShopping className='flex justify-center items-center' size={21} color='black'></FaCartShopping>
+              </button>
+            </NavLink>
+            <NavLink to="/">
+              <button className="btn btn-ghost btn-circle">
+                <div className="indicator">
+                  <SignOutIcon size={24} />
+                </div>
+              </button>
+            </NavLink>
+          </div>
+        </div>
+        <div className='grow rounded-b-lg bg-slate-800 p-3 flex flex-row flex-wrap gap-4 justify-center overflow-scroll'>
+          {
+            jsonData.map((item, index) => (
+              <SingleItem key={index} item={item}>
+                <div className='flex flex-row items-center'>
+                  <button className='btn btn-error'>-</button>
+                  <p>0</p>
+                  <button className='btn btn-success'>+</button>
+                </div>
+              </SingleItem>
+            ))
+          }
+        </div>
+    </div>
+  )
+};
+
+export default Items;
