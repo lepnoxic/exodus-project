@@ -1,4 +1,5 @@
 import React, {useRef,useEffect,useState} from 'react';
+import { useNavigate } from 'react-router';
 import Globe from 'react-globe.gl';
 import locations from '/data/output1.json';
 
@@ -6,15 +7,18 @@ const width=window.innerWidth;
 
 const Location = () => {
   const [places, setPlaces] = useState([]);
-  const [text, setText] = useState('');
   const [arcsData, setArcsData] = useState([]);
   const [currentMode, setCurrentMode] = useState(0);
   const globeEl = useRef();
+  const navigate = useNavigate();
 
   let dstlatitude = 100000;
   let dstlongitude = 100000;
   let srclatitude;
   let srclongitude;
+
+  let text;
+
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -25,10 +29,6 @@ const Location = () => {
       .then(res => res.json())
       .then(({ features }) => setPlaces(features));
   }, []);
-
-  
-
-
 
   const createArcs = (latitude, longitude) => {
     fetch('../../data/output.json')
@@ -86,6 +86,7 @@ const Location = () => {
       srclongitude = top5Locations[index].longitude;
       setArcsData(newArcsData);
       console.log(dstlatitude, dstlongitude, srclatitude, srclongitude)
+      localStorage.setItem('source', top5Locations[index].name); 
       localStorage.setItem('srclatitude', srclatitude);
       localStorage.setItem('srclongitude', srclongitude);
       localStorage.setItem('dstlatitude', dstlatitude);
@@ -93,11 +94,8 @@ const Location = () => {
     });
 };
 
-
-  
-
   const updatePOV = (refer, latitude, longitude) => {
-    const zoom_location = { lat: latitude, lng: longitude, altitude: 0.75 };
+    const zoom_location = { lat: latitude, lng: longitude, altitude: 1.2 };
     refer.current.pointOfView(zoom_location, 1000);
   };
 
@@ -105,6 +103,7 @@ const Location = () => {
   const handleCitySubmit = () => {
     if (dstlatitude == 100000 || dstlongitude == 100000) 
       return;
+    
     createArcs(dstlatitude, dstlongitude);
     setCurrentMode(1);
   };
@@ -116,7 +115,8 @@ const Location = () => {
       return;
     }
     const selectedCity = locations[selectedIndex];
-    const { latitude, longitude } = selectedCity;
+    const { latitude, longitude, name } = selectedCity;
+    localStorage.setItem('destination', name);
     updatePOV(globeEl, latitude, longitude);
     dstlatitude = latitude;
     dstlongitude = longitude;
@@ -134,19 +134,56 @@ const Location = () => {
   }, [currentMode]);
 
   useEffect(() => {
+    console.log(currentMode);
     if (currentMode === 2) {
+      text = "Payment Succeded, Initiating Fast Transfer";
       const storedSrcLatitude = localStorage.getItem('srclatitude');
       const storedSrcLongitude = localStorage.getItem('srclongitude');
       const storedDstLatitude = localStorage.getItem('dstlatitude');
-      const storedDstLongitude = localStorage.getItem('dstlongitude');
+      const storedDstongitude = localStorage.getItem('dstlongitude');
       // Wait for 10 seconds before changing mode to 2
       const timeoutId = setTimeout(() => {
         updatePOV(globeEl, storedSrcLatitude, storedSrcLongitude);
+        setCurrentMode(3);
       }, 3500); 
       // Cleanup the timeout on component unmount or mode change
       return () => clearTimeout(timeoutId);
     }
-  }, [currentMode, srclatitude, srclongitude]);
+    if (currentMode === 3) {
+      const storedSrcLatitude = parseFloat(localStorage.getItem('srclatitude'));
+      const storedSrcLongitude = parseFloat(localStorage.getItem('srclongitude'));
+      const storedDstLatitude = parseFloat(localStorage.getItem('dstlatitude'));
+      const storedDstongitude = parseFloat(localStorage.getItem('dstlongitude')); 
+      // Wait for 10 seconds before changing mode to 2
+      const timeoutId = setTimeout(() => {
+        updatePOV(globeEl, (storedSrcLatitude + storedDstLatitude) / 2, (storedSrcLongitude + storedDstongitude)/2);
+        setCurrentMode(4);
+      }, 3500); 
+      // Cleanup the timeout on component unmount or mode change
+      return () => clearTimeout(timeoutId);
+    }
+    if (currentMode==4) {
+      const storedSrcLatitude = parseFloat(localStorage.getItem('srclatitude'));
+      const storedSrcLongitude = parseFloat(localStorage.getItem('srclongitude'));
+      const storedDstLatitude = parseFloat(localStorage.getItem('dstlatitude'));
+      const storedDstongitude = parseFloat(localStorage.getItem('dstlongitude')); 
+      // Wait for 10 seconds before changing mode to 2
+      const timeoutId = setTimeout(() => {
+        updatePOV(globeEl, storedDstLatitude, storedDstongitude);
+        setCurrentMode(5);
+      }, 3500); 
+      // Cleanup the timeout on component unmount or mode change
+      return () => clearTimeout(timeoutId);
+    }
+    if (currentMode == 5) {
+      
+      const timeoutId = setTimeout(() => {
+        navigate('/delivery');
+      }, 3500); 
+      // Cleanup the timeout on component unmount or mode change
+      return () => clearTimeout(timeoutId);
+    }
+  }, [currentMode]);
 
   if (currentMode === 0)
     return (
@@ -185,11 +222,6 @@ const Location = () => {
             labelDotRadius={d => Math.sqrt(d.properties.pop_max) * 4e-4}
             labelColor={() => 'rgba(255,255,0,0.5)'}
             labelResolution={5}
-            // arcsData={arcsData}
-            // arcColor={'color'}
-            // arcDashLength={() => Math.random()}
-            // arcDashGap={() => Math.random()}
-            // arcDashAnimateTime={() => Math.random() * 4000 + 500}
             width={width}
             backgroundColor='rgba(0,0,0,0)'
           />
@@ -209,11 +241,22 @@ const Location = () => {
       )
   }
 
-  if (currentMode === 2) 
+  if (currentMode >= 2) 
   return (
     <div className="flex flex-row overflow-x-hidden">
-      <div className="absolute h-screen flex items-center">
-  
+      <div className="absolute h-screen flex items-center text-3xl ml-14 z-[3]">
+      {currentMode === 2 && (
+        <p>Payment Succeded, Initiating Fast Transfer</p>
+      )}
+      {currentMode === 3 && (
+        <p>Package is ready to deliver from <b>{localStorage.getItem('source')}</b></p>
+      )}
+      {currentMode === 4 && (
+        <p>Package on travel at Mach 3000</p>
+      )}
+      {currentMode === 5 && (
+        <p>Package has arriving at <b>{localStorage.getItem('destination')}</b>, get ready to pick it up</p>
+      )}
       </div>
       <div className='flex-grow flex justify-center items-center' style={{ flex: '0 0 20%' }}>
       </div>
