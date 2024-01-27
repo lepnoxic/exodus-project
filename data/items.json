@@ -53,7 +53,7 @@
         "name": "Headphones",
         "stock": 13,
         "price": 1000,
-        "image": "src/assets/Untitled.jpeg"
+        "image": "src/assets/headphones1_real.png"
     },
     {
         "id": 9,
@@ -81,7 +81,7 @@
         "name": "Oxygen Tank",
         "stock": 15,
         "price":8000 ,
-        "image": "src/assets/oxygen_tank_real.jpg"
+        "image": "src/assets/oxygen1.jpg"
     },
     {
         "id": 13,
@@ -99,13 +99,6 @@
     },
     {
         "id": 15,
-        "name": "Board Games",
-        "stock":280 ,
-        "price": 300,
-        "image": ""
-    },
-    {
-        "id": 16,
         "name": "Utensils",
         "stock": 300,
         "price": 350,
