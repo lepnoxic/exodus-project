@@ -73,6 +73,63 @@ const Location = () => {
       });
   }, []);
 
+  const createArcs = (latitude, longitude) => {
+    fetch('../../data/output.json')
+    .then(res => res.json())
+    .then(({ coordinates }) => {
+      const numberOfArcs = 20;
+      const N = coordinates.length;
+      const top5Locations = [
+        {
+          "name": "Proxima Centauri",
+          "latitude": -113.184152,
+          "longitude": -83.732973
+        },
+        {
+          "name": "Monoceros",
+          "latitude": -2.899684,
+          "longitude": 37.046811
+        },
+        {
+          "name": "Ankaa",
+          "latitude": -24.471862,
+          "longitude": 62.39699
+        },
+        {
+          "name": "Akola",
+          "latitude": 33.938116,
+          "longitude": -25.651277
+        },
+        {
+          "name": "Ronaldo",
+          "latitude": -65.011029,
+          "longitude": -19.839776
+        }
+      ];
+
+      const randomIndices = [];
+      while (randomIndices.length < numberOfArcs) {
+        const randomIndex = Math.floor(Math.random() * N);
+        if (!randomIndices.includes(randomIndex)) {
+          randomIndices.push(randomIndex);
+        }
+      }
+      const index = Math.floor(Math.random() * 5)
+      const newArcsData = randomIndices.map(() => ({
+        startLat: top5Locations[index].latitude,
+        startLng: top5Locations[index].longitude,
+        endLat: latitude,
+        endLng: longitude,
+        color: [
+          ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)],
+          ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)],
+        ],
+      }));
+      setArcsData(newArcsData);
+      console.log(top5Locations[0].latitude)
+    });
+};
+
   const updatePOV = (latitude, longitude) => {
     const zoom_location = { lat: latitude, lng: longitude, altitude: 0.75 };
     globeEl.current.pointOfView(zoom_location, 1000);
@@ -85,7 +142,7 @@ const Location = () => {
   const handleCitySubmit = () => {
     if (srclatitude == 100000 || srclongitude == 100000) 
       return;
-    console.log(srclatitude, srclongitude);
+    createArcs(srclatitude, srclongitude);
     setCurrentMode(1);
   };
 
