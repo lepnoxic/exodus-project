@@ -25,7 +25,7 @@ const Delivery = () => {
 
     return (
         <div className='flex justify-center items-center w-screen h-screen flex-col gap-10'>
-            <div className='w-[70vw] h-[70vh] bg-slate-800 rounded-3xl flex flex-col justify-center items-center gap-3'>
+            <div className='w-[55vw] h-[70vh] bg-slate-800 rounded-3xl flex flex-col justify-center items-center gap-3'>
                 <div className='text-4xl font-bold'>Thank you for buying at Bluepyter Services</div>
                 <table className='table w-[40vw] text-xl'>
                     <tbody>
