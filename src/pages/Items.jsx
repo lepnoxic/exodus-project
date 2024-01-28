@@ -5,9 +5,7 @@ import { SignOutIcon } from '@primer/octicons-react';
 import SingleItem from '../components/SingleItem';
 import jsonData from '../../data/items.json';
 import { NavLink } from 'react-router-dom';
-import Marquee from 'react-fast-marquee';
 import { FaBullhorn } from 'react-icons/fa6';
-import CustomMarquee from '../components/CustomMarquee';
 
 const Items = () => {
   const [sortedData, setSortedData] = useState([...jsonData]);
@@ -60,17 +58,29 @@ const Items = () => {
               Amogus is the highest rated game on oogleway.
             </div>
           </Marquee> */}
-          <CustomMarquee className='w-[65vw] text-white border-l-[1px]'>
-              We are now delivering to Nemus. With this our services are available throughout the planet.
-              Taurus puts up bounty on alligators.
-              Canis Major distributes meat to avoid pineapple on pizza.
-              Ascella shuts down all its public toilets.
-              Lepus undergoes mass deforestation to promote global warming.
-              Fedora now declared national attire in Kepler.
-              Akola is leading cure research.
-              Hackerman wins Exodus (hopefully).
-              Amogus is the highest rated game on oogleway.
-          </CustomMarquee>
+          <div class="relative flex overflow-x-hidden w-[65vw]">
+            <div class="animate-marquee whitespace-nowrap">
+              <span class="mx-1">We are now delivering to Nemus. With this our services are available throughout the planet.</span>
+              <span class="mx-1">Taurus puts up bounty on alligators.</span>
+              <span class="mx-1">Canis Major distributes meat to avoid pineapple on pizza.</span>
+              <span class="mx-1">Ascella shuts down all its public toilets.</span>
+              <span class="mx-1">Lepus undergoes mass deforestation to promote global warming.</span>
+              <span class="mx-1">Akola is leading cure research.</span>
+              <span class="mx-1">Hackerman wins Exodus (hopefully).</span>
+              <span class="mx-1">Amogus is the highest rated game on oogleway.</span>
+            </div>
+
+            <div class="absolute top-0 animate-marquee2 whitespace-nowrap">
+            <span class="mx-1">We are now delivering to Nemus. With this our services are available throughout the planet.</span>
+              <span class="mx-1">Taurus puts up bounty on alligators.</span>
+              <span class="mx-1">Canis Major distributes meat to avoid pineapple on pizza.</span>
+              <span class="mx-1">Ascella shuts down all its public toilets.</span>
+              <span class="mx-1">Lepus undergoes mass deforestation to promote global warming.</span>
+              <span class="mx-1">Akola is leading cure research.</span>
+              <span class="mx-1">Hackerman wins Exodus (hopefully).</span>
+              <span class="mx-1">Amogus is the highest rated game on oogleway.</span>
+            </div>
+          </div>
         </div>
         <div className="navbar-end">
           <NavLink to="/cart">
