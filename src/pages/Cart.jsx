@@ -11,28 +11,59 @@ const Cart = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <h2>Cart Items:</h2>
-        <ul>
-          {cartItems.map((cartItem) => {
-            const item = jsonData.find((dataItem) => dataItem.id === cartItem.id);
-            if (item) {
-              return (
-                <li key={item.id}>
-                  {item.name} - Count: {cartItem.count}
-                </li>
-              );
-            }
-            return null;
-          })}
-        </ul>
+    <div className='flex justify-center items-center w-screen h-screen flex-col'>
+      <div className='h-[70vh] w-[70vw] rounded-xl flex flex-col gap-5 justify-center items-center bg-slate-700'>
+        <div className='flex flex-col items-center gap-2'>
+          <p className='text-4xl'>Cart Items</p>
+          <table className='table'>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Count
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartItems.map((cartItem) => {
+                const item = jsonData.find((dataItem) => dataItem.id === cartItem.id);
+                if (item) {
+                  return (
+                    <tr>
+                      <th>
+                        {item.id}
+                      </th>
+                      <td>
+                        {item.name}
+                      </td>
+                      <td>
+                        {cartItem.count}
+                      </td>
+                    </tr>
+                  );
+                }
+                return null;
+              })}
+            </tbody>
+          </table>
+          
+        </div>
+        <div className='flex flex-row gap-5'>
+          <NavLink to='/items'>
+            <button className='btn'>
+              GO BACK
+            </button>
+          </NavLink>
+          <NavLink to='/location'>
+            <button className='btn btn-success'>
+              <p className='text-white'>CONFIRM</p>
+            </button>
+          </NavLink>
+        </div>
       </div>
-      <NavLink to='/location'>
-        <button>
-          Confirm
-        </button>
-      </NavLink>
     </div>
   );
 };
