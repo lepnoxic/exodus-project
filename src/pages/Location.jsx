@@ -4,7 +4,6 @@ import Globe from 'react-globe.gl';
 import locations from '../../data/output1.json';
 
 
-console.log(locations);
 const width=window.innerWidth;
 
 const Location = () => {
