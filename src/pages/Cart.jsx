@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import jsonData from '/public/data/items.json';
+import jsonData from '/data/items.json';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);

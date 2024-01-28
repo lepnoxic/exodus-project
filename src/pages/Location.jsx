@@ -1,7 +1,7 @@
 import React, {useRef,useEffect,useState} from 'react';
 import { useNavigate } from 'react-router';
 import Globe from 'react-globe.gl';
-import locations from '/public/data/output1.json';
+import locations from '/data/output1.json';
 
 const width=window.innerWidth;
 
