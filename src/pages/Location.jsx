@@ -235,7 +235,7 @@ const Location = () => {
             labelText={d => d.properties.name}
             labelSize={d => Math.sqrt(d.properties.pop_max) * 4e-4}
             labelDotRadius={d => Math.sqrt(d.properties.pop_max) * 4e-4}
-            labelColor={() => 'rgba(255,255,0,0.5)'}
+            labelColor={() => 'rgba(255, 220, 0,1)'}
             labelResolution={5}
             width={width}
             backgroundColor='rgba(0,0,0,0)'
@@ -285,7 +285,7 @@ const Location = () => {
         labelText={d => d.properties.name}
         labelSize={d => Math.sqrt(d.properties.pop_max) * 4e-4}
         labelDotRadius={d => Math.sqrt(d.properties.pop_max) * 4e-4}
-        labelColor={() => 'rgba(255,255,0,0.5)'}
+        labelColor={() => 'rgba(255, 220, 0,1)'}
         labelResolution={5}
         arcsData={arcsData}
         arcColor={'color'}
