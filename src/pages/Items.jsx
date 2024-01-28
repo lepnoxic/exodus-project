@@ -3,7 +3,7 @@ import { SortDescIcon } from '@primer/octicons-react';
 import { FaCartShopping } from 'react-icons/fa6';
 import { SignOutIcon } from '@primer/octicons-react';
 import SingleItem from '../components/SingleItem';
-import jsonData from '/data/items.json';
+import jsonData from '../../data/items.json';
 import { NavLink } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { FaBullhorn } from 'react-icons/fa6';
