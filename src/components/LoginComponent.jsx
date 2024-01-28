@@ -11,7 +11,6 @@ const LoginComponent = () => {
   const handleLogin = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user && user.username === username && user.password === password) {
-      // Redirect to home page if login successful
       localStorage.removeItem('cartItems');
       navigate('/items');
     } else {

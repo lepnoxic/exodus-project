@@ -18,7 +18,7 @@ const SingleItem = ({ item, children }) => {
   const handleIncrement = () => {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-  
+    console.log(1)
     if (existingItem && existingItem.count < jsonData[existingItem.id - 1].stock) {
       setCount(count + 1);
   
