@@ -12,7 +12,7 @@ const Cart = () => {
 
   return (
     <div className='flex justify-center items-center w-screen h-screen flex-col'>
-      <div className='h-[70vh] w-[70vw] rounded-xl flex flex-col gap-5 justify-center items-center bg-slate-700'>
+      <div className='h-[90vh] w-[40vw] rounded-xl flex flex-col gap-5 justify-center items-center bg-slate-700'>
         <div className='flex flex-col items-center gap-2'>
           <p className='text-4xl'>Cart Items</p>
           <table className='table'>

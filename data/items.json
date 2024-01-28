@@ -46,7 +46,7 @@
         "name": "Portable Battery",
         "stock": 300,
         "price": 150,
-        "image": "/assets/battery1_real.jpg"
+        "image": "assets/battery1_real.jpg"
     },
     {
         "id": 8,
