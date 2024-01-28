@@ -39,7 +39,7 @@ const Location = () => {
       const N = coordinates.length;
       const top5Locations = [
         {
-          "name": "Proxima Centauri",
+          "name": "Centauri",
           "latitude": -113.184152,
           "longitude": -83.732973
         },
@@ -59,7 +59,7 @@ const Location = () => {
           "longitude": -25.651277
         },
         {
-          "name": "Ronaldo",
+          "name": "Ares",
           "latitude": -65.011029,
           "longitude": -19.839776
         }
@@ -72,7 +72,10 @@ const Location = () => {
           randomIndices.push(randomIndex);
         }
       }
-      const index = Math.floor(Math.random() * 5)
+      let index = Math.floor(Math.random() * 5)
+      while(latitude==top5Locations[index].latitude & longitude==top5Locations[index].longitude) {
+        index = Math.floor(Math.random() * 5);
+      }
       const newArcsData = randomIndices.map(() => ({
         startLat: top5Locations[index].latitude,
         startLng: top5Locations[index].longitude,
