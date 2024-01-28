@@ -74,6 +74,8 @@ const Delivery = () => {
                 })}
                 </tbody>
             </table>
+                <div></div>
+                <div></div>
                 <div className='flex flex-row gap-10'>
                     <button className='btn' onClick={handleItems}>
                         Return to Items
