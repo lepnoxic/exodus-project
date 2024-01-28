@@ -13,11 +13,11 @@ function HomeGlobe({ width }) {
   },[]);
 
   useEffect(() => {
-    fetch('../../data/ne_110m_top_50_populated_cities.geojson')
+    fetch('/public/data/ne_110m_top_50_populated_cities.geojson')
       .then(res => res.json())
       .then(({ features }) => setPlaces(features));
 
-    fetch('../../data/output.json')
+    fetch('/public/data/output.json')
       .then(res => res.json())
       .then(({ coordinates }) => {
         const numberOfArcs = 20;
