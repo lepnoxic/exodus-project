@@ -9,7 +9,7 @@ const Delivery = () => {
     }, []);
 
     return (
-        <div>
+        <div className=''>
             Thank you for buying
             <div>
                 <button className='btn' onClick={() => navigate('/items')}>
