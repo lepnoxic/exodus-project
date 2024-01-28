@@ -40,7 +40,7 @@ const Delivery = () => {
                         </tr>
                     </tbody>
                 </table>
-                <table className='table w-[30vw]'>
+                <table className='table w-[40vw]'>
                 <thead>
                 <tr>
                     <th>ID</th>
