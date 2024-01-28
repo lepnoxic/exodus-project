@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { FaCoins } from 'react-icons/fa6';
+
 
 const SingleItem = ({ item, children }) => {
   const [count, setCount] = useState(0);
@@ -54,11 +56,13 @@ const SingleItem = ({ item, children }) => {
         <h2 className="card-title">
           {item.name}
         </h2>
-        <div className='flex flex-row items-center'>
-          <p>
-            Stock: {item.stock} <br />
-            Price: {item.price}
-          </p>
+        <div className='flex flex-row items-center justify-between '>
+          <div className='flex flex-col gap-2'>
+            <div>Stock: {item.stock} </div>
+            <div className='flex flex-row items-center gap-2'>
+            <FaCoins size={20} /> {item.price}
+            </div>
+          </div>
           <div className='flex flex-row items-center justify-center'>
             <button className='btn btn-error w-2 rounded-none rounded-l-lg' onClick={handleDecrement}>-</button>
             <div className='w-7 text-center text-lg bg-slate-800 h-12 flex justify-center items-center'>{count}</div>

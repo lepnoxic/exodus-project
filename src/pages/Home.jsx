@@ -14,9 +14,9 @@ function Home() {
 
   return (
       <div className='flex h-screen w-screen text-white'>
-        <div className='w-[50vw] flex justify-center items-center'>
+        <div className='w-[50vw] md:w-screen flex justify-center items-center'>
 
-          {(currentState === 0) && (<div className='grow flex flex-col gap-10 justify-center items-start ml-40   z-0'>
+          {(currentState === 0) && (<div className='grow flex flex-col gap-10 justify-center items-start ml-40 z-0'>
             <div className='text-6xl'>
               Bluepyter Services
             </div>
@@ -39,7 +39,7 @@ function Home() {
 
         <div className='w-[50vw]'>
           <HomeGlobe 
-            width={width * 0.5}
+            width={(width > 1000) ? width * 0.5 : width}
           />
         </div>
       </div>

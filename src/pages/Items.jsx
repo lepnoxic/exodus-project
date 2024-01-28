@@ -55,7 +55,7 @@ const Items = () => {
             Lepus undergoes mass deforestation to promote global warming.
             Fedora now declared national attire in Kepler.
             Akola is leading cure research.
-            Hackerman wins Exodus(hopefully)
+            Hackerman wins Exodus (hopefully).
             Amogus is the highest rated game on oogleway.
           </Marquee>
         </div>

@@ -4,6 +4,7 @@ import Globe from 'react-globe.gl';
 import locations from '/data/output1.json';
 
 const width=window.innerWidth;
+console.log(width);
 
 const Location = () => {
   const [places, setPlaces] = useState([]);
