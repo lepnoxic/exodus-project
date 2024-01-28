@@ -95,14 +95,14 @@
         "name": "Candy",
         "stock": 540,
         "price":10 ,
-        "image": "/assets/candy.jpg"
+        "image": "/assets/candy1_real.jpg"
     },
     {
         "id": 15,
         "name": "Utensils",
         "stock": 300,
         "price": 350,
-        "image": "/assets/utensils1_real.jpg"
+        "image": "/assets/utensils2_real.jpg"
     }
 ]
 
