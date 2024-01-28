@@ -10,7 +10,7 @@ const App = () => {
         <ParticlesBackground></ParticlesBackground>
       </div>
       <div>
-        <Router basename={import.meta.env.DEV ? '/' : '/react-vite-gh-pages/'}>
+        <Router basename={import.meta.env.DEV ? '/' : '/exodus-project/'}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/location' element={<Location />} />
