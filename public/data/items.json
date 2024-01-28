@@ -4,105 +4,105 @@
         "name": "Space Suit",
         "stock": 10,
         "price": 1000000,
-        "image": "src/assets/space_suit_real.png"
+        "image": "/public/assets/space_suit_real.png"
     },  
     {
         "id": 2,
         "name": "Toilet Paper",
         "stock": 0,
         "price": 30,
-        "image": "src/assets/toilet_real.jpg"
+        "image": "/public/assets/toilet_real.jpg"
     },
     {
         "id": 3,
         "name": "T-Shirt 2 pieces",
         "stock": 400,
         "price": 100,
-        "image": "src/assets/tshirt.jpg"
+        "image": "/public/assets/tshirt.jpg"
     },
     {
         "id": 4,
         "name": "Space Soap",
         "stock": 1000,
         "price": 10,
-        "image": "src/assets/soap_real.jpg"
+        "image": "/public/assets/soap_real.jpg"
     },
     {
         "id": 5,
         "name": "Towel",
         "stock": 200,
         "price": 120,
-        "image": "src/assets/towel1_real.png"
+        "image": "/public/assets/towel1_real.png"
     },
     {
         "id": 6,
         "name": "First-Aid Kit",
         "stock": 44,
         "price": 100,
-        "image": "src/assets/first_aid_real.jpg"
+        "image": "/public/assets/first_aid_real.jpg"
     },
     {
         "id": 7,
         "name": "Portable Battery",
         "stock": 300,
         "price": 150,
-        "image": "src/assets/battery1_real.jpg"
+        "image": "/public/assets/battery1_real.jpg"
     },
     {
         "id": 8,
         "name": "Headphones",
         "stock": 13,
         "price": 1000,
-        "image": "src/assets/headphones1_real.png"
+        "image": "/public/assets/headphones1_real.png"
     },
     {
         "id": 9,
         "name": "3D Food Printer",
         "stock": 3,
         "price": 50000,
-        "image": "src/assets/food_real.jpg"
+        "image": "/public/assets/food_real.jpg"
     },
     {
         "id": 10,
         "name": "3D Food Cartridge Pack",
         "stock": 1500,
         "price": 1000,
-        "image": "src/assets/pack_real.jpg"
+        "image": "/public/assets/pack_real.jpg"
     },
     {
         "Id": 11,
         "name": "Jetpack",
         "stock": 100,
         "price": 100000,
-        "image": "src/assets/jetpack_real.png"
+        "image": "/public/assets/jetpack_real.png"
     },
     {
         "id": 12,
         "name": "Oxygen Tank",
         "stock": 15,
         "price":8000 ,
-        "image": "src/assets/oxygen1.jpg"
+        "image": "/public/assets/oxygen1.jpg"
     },
     {
         "id": 13,
         "name": "Oximeter",
         "stock": 5,
         "Price": 9000 ,
-        "image": "src/assets/oximeter_real.jpg"
+        "image": "/public/assets/oximeter_real.jpg"
     },
     {
         "id": 14,
         "name": "Candy",
         "stock": 540,
         "price":10 ,
-        "image": "src/assets/candy.jpg"
+        "image": "/public/assets/candy.jpg"
     },
     {
         "id": 15,
         "name": "Utensils",
         "stock": 300,
         "price": 350,
-        "image": "src/assets/utensils1_real.jpg"
+        "image": "/public/assets/utensils1_real.jpg"
     }
 ]
 

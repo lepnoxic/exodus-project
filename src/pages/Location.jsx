@@ -1,7 +1,7 @@
 import React, {useRef,useEffect,useState} from 'react';
 import { useNavigate } from 'react-router';
 import Globe from 'react-globe.gl';
-import locations from '/data/output1.json';
+import locations from '/public/data/output1.json';
 
 const width=window.innerWidth;
 
@@ -25,13 +25,13 @@ const Location = () => {
   }
 
   useEffect(() => {
-    fetch('../../data/ne_110m_top_50_populated_cities.geojson')
+    fetch('/public/data/ne_110m_top_50_populated_cities.geojson')
       .then(res => res.json())
       .then(({ features }) => setPlaces(features));
   }, []);
 
   const createArcs = (latitude, longitude) => {
-    fetch('../../data/output.json')
+    fetch('/public/data/output.json')
     .then(res => res.json())
     .then(({ coordinates }) => {
       const numberOfArcs = 20;
