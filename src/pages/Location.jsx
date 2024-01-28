@@ -38,7 +38,7 @@ const Location = () => {
       const N = coordinates.length;
       const top5Locations = [
         {
-          "name": "Proxima Centauri",
+          "name": "Centauri",
           "latitude": -113.184152,
           "longitude": -83.732973
         },
@@ -58,7 +58,7 @@ const Location = () => {
           "longitude": -25.651277
         },
         {
-          "name": "Ronaldo",
+          "name": "Ares",
           "latitude": -65.011029,
           "longitude": -19.839776
         }
