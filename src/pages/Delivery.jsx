@@ -31,11 +31,11 @@ const Delivery = () => {
                 <table className='table w-[30vw] text-xl'>
                     <tbody>
                     <tr className='flex items-center justify-center'>
-                                <td  >{localStorage.getItem('destination')}</td>                
+                                <td  >{localStorage.getItem('source')}</td>                
                             <FaArrowRightLong size={21.5 } />
                          
                             <td  >
-                            {localStorage.getItem('source')}
+                            {localStorage.getItem('destination')}
                             </td>
                         </tr>
                     </tbody>
