@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Centauri",
+    "latitude": -113.184152,
+    "longitude": -83.732973
+  },
+  {
+    "name": "Monoceros",
+    "latitude": -2.899684,
+    "longitude": 37.046811
+  },
+  {
+    "name": "Ankaa",
+    "latitude": -24.471862,
+    "longitude": 62.39699
+  },
+  {
+    "name": "Akola",
+    "latitude": 33.938116,
+    "longitude": -25.651277
+  },
+  {
+    "name": "Ares",
+    "latitude": -65.011029,
+    "longitude": -19.839776
+  },
+  {
+    "name": "Hanji",
+    "latitude": -145.201716,
+    "longitude": -73.607734
+  },
+  {
+    "name": "Kolt",
+    "latitude": 111.613119,
+    "longitude": 58.320425
+  },
+  {
+    "name": "Petalburg",
+    "latitude": 30.109568,
+    "longitude": 12.292685
+  },
+  {
+    "name": "Prax",
+    "latitude": -41.838099,
+    "longitude": 33.15746
+  },
+  {
+    "name": "Polaris",
+    "latitude": -122.629159,
+    "longitude": -14.48166
+  },
+  {
+    "name": "Dabih",
+    "latitude": 71.902021,
+    "longitude": -83.217559
+  },
+  {
+    "name": "Nemus",
+    "latitude": -98.508045,
+    "longitude": -37.547009
+  },
+  {
+    "name": "Polgar",
+    "latitude": 37.391642,
+    "longitude": 83.309392
+  },
+  {
+    "name": "Piao",
+    "latitude": 51.262297,
+    "longitude": 14.638508
+  },
+  {
+    "name": "Manila",
+    "latitude": 10.386199,
+    "longitude": -79.193425
+  },
+  {
+    "name": "Formax",
+    "latitude": -129.999568,
+    "longitude": 81.646048
+  },
+  {
+    "name": "Nihal",
+    "latitude": -26.776939,
+    "longitude": 27.945641
+  },
+  {
+    "name": "Oui",
+    "latitude": -53.230399,
+    "longitude": -5.492269
+  },
+  {
+    "name": "Carlsen",
+    "latitude": -134.548855,
+    "longitude": 59.934134
+  },
+  {
+    "name": "Grus",
+    "latitude": 143.229295,
+    "longitude": -1.335542
+  },
+  {
+    "name": "Tucana",
+    "latitude": -118.721406,
+    "longitude": -35.964695
+  },
+  {
+    "name": "Yokai",
+    "latitude": 51.459069,
+    "longitude": -45.58272
+  },
+  {
+    "name": "Saiph",
+    "latitude": 105.0388,
+    "longitude": 77.146999
+  },
+  {
+    "name": "Lima",
+    "latitude": 77.047175,
+    "longitude": 36.94427
+  },
+  {
+    "name": "Chill",
+    "latitude": 3.385161,
+    "longitude": -65.603335
+  },
+  {
+    "name": "Kinshasa",
+    "latitude": 151.116762,
+    "longitude": 59.018033
+  },
+  {
+    "name": "Bogota",
+    "latitude": -35.980493,
+    "longitude": -5.490646
+  },
+  {
+    "name": "Telescopium",
+    "latitude": 158.371628,
+    "longitude": -26.531172
+  },
+  {
+    "name": "Sirius",
+    "latitude": 107.331738,
+    "longitude": -16.568434
+  },
+  {
+    "name": "Traffic",
+    "latitude": 47.996785,
+    "longitude": 74.290612
+  },
+  {
+    "name": "Arrakis",
+    "latitude": -130.283893,
+    "longitude": -43.435496
+  },
+  {
+    "name": "Indus",
+    "latitude": 75.451958,
+    "longitude": -8.022929
+  },
+  {
+    "name": "Volantis",
+    "latitude": -67.424258,
+    "longitude": 0.44895
+  },
+  {
+    "name": "Haedi",
+    "latitude": 73.325596,
+    "longitude": 71.227176
+  },
+  {
+    "name": "Hyperion",
+    "latitude": 14.371069,
+    "longitude": -84.009563
+  },
+  {
+    "name": "Sing",
+    "latitude": 127.294215,
+    "longitude": -14.934279
+  },
+  {
+    "name": "Luanda",
+    "latitude": 69.668644,
+    "longitude": 5.78782
+  },
+  {
+    "name": "Poseidon",
+    "latitude": -148.430661,
+    "longitude": 38.858101
+  },
+  {
+    "name": "Khartoum",
+    "latitude": 64.594435,
+    "longitude": 32.676629
+  },
+  {
+    "name": "Nunki Ascella",
+    "latitude": -145.564388,
+    "longitude": 24.41103
+  },
+  {
+    "name": "Valeria",
+    "latitude": -35.520605,
+    "longitude": -21.503094
+  },
+  {
+    "name": "Arnab",
+    "latitude": 154.788236,
+    "longitude": -62.514796
+  },
+  {
+    "name": "Asgard",
+    "latitude": 93.395472,
+    "longitude": -89.044088
+  },
+  {
+    "name": "Hanoi",
+    "latitude": 119.891806,
+    "longitude": -88.861934
+  },
+  {
+    "name": "Castor",
+    "latitude": -52.992331,
+    "longitude": -55.762627
+  },
+  {
+    "name": "Betelgeuse",
+    "latitude": 170.946182,
+    "longitude": 70.30212
+  },
+  {
+    "name": "Triangulum",
+    "latitude": -38.039757,
+    "longitude": -59.265557
+  },
+  {
+    "name": "Abidjan",
+    "latitude": 41.830586,
+    "longitude": -76.861493
+  }
+]
