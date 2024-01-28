@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaCoins } from 'react-icons/fa6';
-
+import jsonData from '../../data/items.json';
 
 const SingleItem = ({ item, children }) => {
   const [count, setCount] = useState(0);
@@ -16,19 +16,23 @@ const SingleItem = ({ item, children }) => {
   }, [item.id]);
 
   const handleIncrement = () => {
-    setCount(count + 1);
-
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-
-    if (existingItem) {
-      existingItem.count += 1;
-    } else {
+  
+    if (existingItem && existingItem.count < jsonData[existingItem.id - 1].stock) {
+      setCount(count + 1);
+  
+      if (existingItem.count + 1 <= jsonData[existingItem.id - 1].stock) {
+        existingItem.count += 1;
+      }
+    } else if (!existingItem && count < jsonData[item.id - 1].stock) {
+      setCount(count + 1);
       cartItems.push({ id: item.id, count: 1 });
     }
-
+  
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   };
+  
 
   const handleDecrement = () => {
     if (count > 0) {
