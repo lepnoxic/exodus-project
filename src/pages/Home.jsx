@@ -8,8 +8,11 @@ const width=window.innerWidth;
 
 function Home() {
   const [currentState, setCurrentState] = useState(0);
-  const handleClick = () => {
+  const handleSignup = () => {
     setCurrentState(1);
+  };
+  const handleLogin = () => {
+    setCurrentState(2);
   };
 
   return (
@@ -24,16 +27,21 @@ function Home() {
               Travelling around Bluepyter at Mach 3000 
             </div>
             <div className='flex flex-row gap-5'>
-              <button className='btn btn-primary' onClick={handleClick}>
-                Sign Up | Log In
+              <button className='btn btn-primary' onClick={handleSignup}>
+                Sign Up
+              </button>
+              <button className='btn btn-primary' onClick={handleLogin}>
+                Log In
               </button>
             </div>
           </div>)}
 
-          {(currentState === 1) && (<div className='flex flex-row gap-24'>
-            <SignupComponent />
-            <LoginComponent />
-            </div>
+          {(currentState === 1) && (
+            <SignupComponent setCurrentState={setCurrentState} />
+          )}
+
+          {(currentState === 2) && (
+            <LoginComponent setCurrentState={setCurrentState} />
           )}
         </div>
 
