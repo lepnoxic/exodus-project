@@ -6,6 +6,8 @@ import SingleItem from '../components/SingleItem';
 import jsonData from '/data/items.json';
 import { NavLink } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
+import { FaBullhorn } from 'react-icons/fa6';
+
 
 const Items = () => {
   const [sortedData, setSortedData] = useState([...jsonData]);
@@ -43,8 +45,9 @@ const Items = () => {
             </ul>
           </div>
         </div>
-        <div className="navbar-center">
-          <Marquee className='navbar-centre w-[65vw]'>
+        <div className="navbar-center gap-3 flex items-center rounded-xl border-[1px] py-2 pl-3">
+          <FaBullhorn className='-rotate-12'></FaBullhorn>
+          <Marquee className='navbar-centre w-[65vw] text-white border-l-[1px]'>
             We are now delivering to Nemus. With this our services are available throughout the planet.
             Taurus puts up bounty on alligators.
             Canis Major distributes meat to avoid pineapple on pizza.
@@ -71,7 +74,7 @@ const Items = () => {
           </NavLink>
         </div>
       </div>
-      <div className="grow rounded-b-lg bg-slate-800 p-3 flex flex-row flex-wrap gap-4 justify-center overflow-scroll">
+      <div className="grow rounded-b-lg bg-gray-700 p-3 flex flex-row flex-wrap gap-4 justify-center overflow-scroll">
         {sortedData.map((item, index) => (
           <SingleItem key={index} item={item} />
         ))}

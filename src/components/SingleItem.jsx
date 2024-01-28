@@ -59,10 +59,10 @@ const SingleItem = ({ item, children }) => {
             Stock: {item.stock} <br />
             Price: {item.price}
           </p>
-          <div className='flex flex-row items-center'>
-            <button className='btn btn-error' onClick={handleDecrement}>-</button>
-            <p>{count}</p>
-            <button className='btn btn-success' onClick={handleIncrement}>+</button>
+          <div className='flex flex-row items-center justify-center'>
+            <button className='btn btn-error w-2 rounded-none rounded-l-lg' onClick={handleDecrement}>-</button>
+            <div className='w-7 text-center text-lg bg-white h-12 flex justify-center items-center text-black'>{count}</div>
+            <button className='btn btn-success w-2 rounded-none rounded-r-lg' onClick={handleIncrement}>+</button>
           </div>
         </div>
         {children}
