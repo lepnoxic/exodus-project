@@ -47,7 +47,7 @@ const Items = () => {
         </div>
         <div className="navbar-center gap-3 flex items-center rounded-xl border-[1px] py-2 pl-3">
           <FaBullhorn className='-rotate-12'></FaBullhorn>
-          <Marquee style={{ '--width': '65vw' }} className='w-[65vw] text-white border-l-[1px]'>
+          <Marquee style={{ '--width': '65vw !important' }} className='w-[65vw] text-white border-l-[1px]'>
               We are now delivering to Nemus. With this our services are available throughout the planet.
               Taurus puts up bounty on alligators.
               Canis Major distributes meat to avoid pineapple on pizza.
