@@ -57,21 +57,21 @@ function Home() {
                 As we embark on this extraordinary journey together, think of Bluepyter Services not just as a supplier but as your companions on this cosmic adventure, providing support akin to navigating a pandemic on a planetary scale. Connect with us, and let's make your experience on Bluepyter a testament to resilience and adaptability in the face of celestial challenges.
                 </p>
               </div>
-              <footer className="footer items-center p-4 bg-neutral text-neutral-content">
-                <aside className="items-center grid-flow-col">
-                  <img src="../../favicon.png" className='rounded-xl h-auto w-8' />
-                  <p>Copyright BS © 2024 - All rights are not reserved</p>
-                </aside> 
-                <p className=''>
-                  By Team Hackerman. Project for Exodus, IEEE Manipal
-                </p>
-                <nav className="grid-flow-col gap-4 justify-center items-center md:place-self-center md:justify-self-end">
-                  <a href="https://github.com/lepnoxic/exodus-project">
-                    <MarkGithubIcon size={34} />
-                  </a>
-                </nav>
-              </footer>
             </div>
+            <footer className="footer  items-center p-4 bg-neutral text-neutral-content">
+              <aside className="items-center grid-flow-col">
+                <img src="../../favicon.png" className='rounded-xl h-auto w-8' />
+                <p>Copyright BS © 2024 - All rights are not reserved</p>
+              </aside> 
+              <p className=''>
+                By Team Hackerman. Project for Exodus, IEEE Manipal
+              </p>
+              <nav className="grid-flow-col gap-4 justify-center items-center md:place-self-center md:justify-self-end">
+                <a href="https://github.com/lepnoxic/exodus-project">
+                  <MarkGithubIcon size={34} />
+                </a>
+              </nav>
+            </footer>
           </div>
           )}
 

@@ -33,7 +33,7 @@ const LoginComponent = ({ setCurrentState }) => {
       <button onClick={handleBack} className='btn btn-circle absolute top-[27vh] left-[32vh]'>
           <FaLeftLong />
       </button>
-      <h2 className="self-center text-4xl">LOGIN</h2>
+      <h2 className="self-center text-4xl font-semibold">LOGIN</h2>
       <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} className='input' />
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className='input'/>
       <div className='flex flex-row gap-5'>

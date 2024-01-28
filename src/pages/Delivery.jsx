@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import jsonData from '../../data/items.json';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 const Delivery = () => {
     const navigate = useNavigate();
@@ -25,25 +26,21 @@ const Delivery = () => {
 
     return (
         <div className='flex justify-center items-center w-screen h-screen flex-col gap-10'>
-            <div className='w-[70vw] h-[70vh] bg-slate-800 rounded-3xl flex flex-col justify-center items-center gap-3'>
+            <div className='w-[55vw] h-[70vh] bg-slate-800 rounded-3xl flex flex-col justify-center items-center gap-1'>
                 <div className='text-4xl font-bold'>Thank you for buying at Bluepyter Services</div>
-                <table className='table w-[40vw] text-xl'>
+                <table className='table w-[30vw] text-xl'>
                     <tbody>
-                        <tr>
-                            <td>Destination</td>
-                                <td>{localStorage.getItem('destination')}</td>
-                        </tr>
-                        <tr>
-                            <td>
-                            Source
-                            </td>
-                            <td>
+                    <tr className='flex items-center justify-center'>
+                                <td  >{localStorage.getItem('destination')}</td>                
+                            <FaArrowRightLong size={21.5 } />
+                         
+                            <td  >
                             {localStorage.getItem('source')}
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <table className='table w-[40vw]'>
+                <table className='table w-[30vw]'>
                 <thead>
                 <tr>
                     <th>ID</th>

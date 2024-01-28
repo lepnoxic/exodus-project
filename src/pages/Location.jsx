@@ -259,7 +259,7 @@ const Location = () => {
   if (currentMode >= 2) 
   return (
     <div className="flex flex-row overflow-x-hidden">
-      <div className="absolute h-screen flex items-center text-3xl ml-14 z-[3]">
+      <div className="absolute h-screen flex items-center text-3xl ml-[3.5vw] z-[3]">
       {currentMode === 2 && (
         <p>Payment Succeded, Initiating Fast Transfer</p>
       )}
