@@ -87,7 +87,7 @@
         "id": 13,
         "name": "Oximeter",
         "stock": 5,
-        "Price": 9000 ,
+        "price": 9000 ,
         "image": "/assets/oximeter_real.jpg"
     },
     {
