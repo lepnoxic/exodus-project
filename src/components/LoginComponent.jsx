@@ -20,11 +20,11 @@ const LoginComponent = () => {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center'>
-      <div className='card w-[13.7rem] bg-base-300 h-12 text-center flex justify-center items-center rounded-none rounded-t-lg'><h2>LOGIN</h2></div>
+    <div className='flex flex-col'>
+      <div className='card bg-base-300 h-12 text-center flex justify-center items-center rounded-none rounded-t-lg'><h2>LOGIN</h2></div>
       <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} className='input rounded-none'/>
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className='input rounded-none'/>
-      <button onClick={handleLogin} className='btn w-[13.7rem] rounded-none btn-success rounded-b-lg'>LOG IN</button>
+      <button onClick={handleLogin} className='btn rounded-none btn-success rounded-b-lg'>LOG IN</button>
       {error && <ErrorAlert message={error} />}
     </div>
   );
