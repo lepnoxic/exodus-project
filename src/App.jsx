@@ -10,9 +10,9 @@ const App = () => {
         <ParticlesBackground></ParticlesBackground>
       </div>
       <div>
-        <Router>
+        <Router basename="/exodus-project">
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route exact path='/exodus-project' element={<Home />} />
             <Route path='/location' element={<Location />} />
             <Route path='/items' element={<Items />} />
             <Route path='/cart' element={<Cart />} />
