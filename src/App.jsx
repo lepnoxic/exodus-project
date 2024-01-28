@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Home, Login, Location, Items, Cart, Delivery } from "./pages";
+import { Home, Location, Items, Cart, Delivery } from "./pages";
 import ParticlesBackground from "./components/ParticlesBackground";
 
 const App = () => {
@@ -13,7 +13,6 @@ const App = () => {
         <Router>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/login' element={<Login />} />
             <Route path='/location' element={<Location />} />
             <Route path='/items' element={<Items />} />
             <Route path='/cart' element={<Cart />} />

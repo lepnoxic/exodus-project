@@ -1,36 +1,48 @@
-import React from 'react';
-import ParticlesBackground from '../components/ParticlesBackground';
+import React, { useState } from 'react';
 import HomeGlobe from '../components/HomeGlobe';
-import { NavLink } from 'react-router-dom';
+import SignupComponent from '../components/SignupComponent';
+import LoginComponent from '../components/LoginComponent';
 
 const width=window.innerWidth;
 
+
 function Home() {
+  const [currentState, setCurrentState] = useState(0);
+  const handleClick = () => {
+    setCurrentState(1);
+  };
+
   return (
-    <div className=''>
       <div className='flex h-screen w-screen text-white'>
-        <div className='grow flex flex-col gap-10 justify-center items-start ml-40   z-0'>
-          <div className='text-6xl'>
-            Company Name
-          </div>
-          <div className='flex flex-row gap-5'>
-            <NavLink to="/Login">
-              <button className='btn btn-primary' >
+        <div className='w-[50vw] flex justify-center items-center'>
+
+          {(currentState === 0) && (<div className='grow flex flex-col gap-10 justify-center items-start ml-40   z-0'>
+            <div className='text-6xl'>
+              Bluepyter Services
+            </div>
+            <div className='text-3xl'>
+              Travelling around Bluepyter at Mach 3000 
+            </div>
+            <div className='flex flex-row gap-5'>
+              <button className='btn btn-primary' onClick={handleClick}>
                 Sign Up | Log In
               </button>
-            </NavLink>
-          </div>
-          <div className='text-3xl'>
-            Announcements
-          </div>
+            </div>
+          </div>)}
+
+          {(currentState === 1) && (<div className='flex flex-row gap-24'>
+            <SignupComponent />
+            <LoginComponent />
+            </div>
+          )}
         </div>
+
         <div className='w-[50vw]'>
           <HomeGlobe 
             width={width * 0.5}
           />
         </div>
       </div>
-    </div>
   )
 }
 

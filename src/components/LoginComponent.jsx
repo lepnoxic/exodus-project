@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ErrorAlert from './ErrorAlert';
 
 const LoginComponent = () => {
   const [username, setUsername] = useState('');
@@ -8,7 +9,6 @@ const LoginComponent = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Implement code to check username and password from local JSON file
     const user = JSON.parse(localStorage.getItem('user'));
     if (user && user.username === username && user.password === password) {
       // Redirect to home page if login successful
@@ -21,14 +21,11 @@ const LoginComponent = () => {
 
   return (
     <div className='flex flex-col justify-center items-center'>
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
-      {error && <div><div role="alert" className="alert alert-error">
-  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-  <span>Error! Task failed successfully.</span>
-</div>{error}</div>}
+      <div className='card w-[13.7rem] bg-base-300 h-12 text-center flex justify-center items-center rounded-none rounded-t-lg'><h2>LOGIN</h2></div>
+      <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} className='input rounded-none'/>
+      <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className='input rounded-none'/>
+      <button onClick={handleLogin} className='btn w-[13.7rem] rounded-none btn-success rounded-b-lg'>LOG IN</button>
+      {error && <ErrorAlert message={error} />}
     </div>
   );
 };
