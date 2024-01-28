@@ -13,12 +13,12 @@ const Delivery = () => {
     }, []);
 
     const handleItems = () => {
-        // localStorage.removeItem('cartItems')
+        localStorage.removeItem('cartItems')
         navigate('/items')
     };
 
     const handleLogout = () => {
-        // localStorage.removeItem('cartItems')
+        localStorage.removeItem('cartItems')
         localStorage.removeItem('user')
         navigate('/')
     };

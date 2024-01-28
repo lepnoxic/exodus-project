@@ -22,7 +22,6 @@ const Items = () => {
       navigate('/cart');
     } else {
       setError('Your cart is empty');
-      console.log(error)
     }
   };
 
