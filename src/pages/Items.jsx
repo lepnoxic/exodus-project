@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SortDescIcon } from '@primer/octicons-react';
 import { FaCartShopping } from 'react-icons/fa6';
 import { SignOutIcon } from '@primer/octicons-react';
@@ -9,6 +9,7 @@ import { FaBullhorn } from 'react-icons/fa6';
 import InfoAlert from '../components/InfoAlert';
 import { useNavigate } from 'react-router-dom';
 
+
 const Items = () => {
   const [sortedData, setSortedData] = useState([...jsonData]);
   const [sortBy, setSortBy] = useState(null);
@@ -17,7 +18,7 @@ const Items = () => {
 
   const handleEmptyCart = () => {
     const cart = JSON.parse(localStorage.getItem('cartItems'));
-    if (cart.length>0) {
+    if (cart && cart.length>0) {
       navigate('/cart');
     } else {
       setError('Your cart is empty');
