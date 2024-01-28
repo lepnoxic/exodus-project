@@ -85,7 +85,6 @@ const Location = () => {
       srclatitude = top5Locations[index].latitude;
       srclongitude = top5Locations[index].longitude;
       setArcsData(newArcsData);
-      console.log(dstlatitude, dstlongitude, srclatitude, srclongitude)
       localStorage.setItem('source', top5Locations[index].name); 
       localStorage.setItem('srclatitude', srclatitude);
       localStorage.setItem('srclongitude', srclongitude);
@@ -134,9 +133,7 @@ const Location = () => {
   }, [currentMode]);
 
   useEffect(() => {
-    console.log(currentMode);
     if (currentMode === 2) {
-      text = "Payment Succeded, Initiating Fast Transfer";
       const storedSrcLatitude = localStorage.getItem('srclatitude');
       const storedSrcLongitude = localStorage.getItem('srclongitude');
       const storedDstLatitude = localStorage.getItem('dstlatitude');

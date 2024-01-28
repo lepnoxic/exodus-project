@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Home, Location, Items, Cart, Delivery } from "./pages";
+import { Home, Location, Items, Cart, Delivery, NotFound } from "./pages";
 import ParticlesBackground from "./components/ParticlesBackground";
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
             <Route path='/items' element={<Items />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/delivery' element={<Delivery />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </Router>
       </div>

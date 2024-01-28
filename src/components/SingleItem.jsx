@@ -61,7 +61,7 @@ const SingleItem = ({ item, children }) => {
           </p>
           <div className='flex flex-row items-center justify-center'>
             <button className='btn btn-error w-2 rounded-none rounded-l-lg' onClick={handleDecrement}>-</button>
-            <div className='w-7 text-center text-lg bg-white h-12 flex justify-center items-center text-black'>{count}</div>
+            <div className='w-7 text-center text-lg bg-slate-800 h-12 flex justify-center items-center'>{count}</div>
             <button className='btn btn-success w-2 rounded-none rounded-r-lg' onClick={handleIncrement}>+</button>
           </div>
         </div>
