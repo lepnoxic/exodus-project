@@ -60,10 +60,15 @@ function Home() {
               <footer className="footer items-center p-4 bg-neutral text-neutral-content">
                 <aside className="items-center grid-flow-col">
                   <img src="../../favicon.png" className='rounded-xl h-auto w-8' />
-                  <p>Copyright © 2024 - All right reserved</p>
+                  <p>Copyright BS © 2024 - All rights are not reserved</p>
                 </aside> 
-                <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-                  
+                <p className=''>
+                  By Team Hackerman. Project for Exodus, IEEE Manipal
+                </p>
+                <nav className="grid-flow-col gap-4 justify-center items-center md:place-self-center md:justify-self-end">
+                  <a href="https://github.com/lepnoxic/exodus-project">
+                    <MarkGithubIcon size={34} />
+                  </a>
                 </nav>
               </footer>
             </div>
