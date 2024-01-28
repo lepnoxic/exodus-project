@@ -13,6 +13,11 @@ const Location = () => {
   const globeEl = useRef();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    globeEl.current.controls().enableRotate = false;
+    globeEl.current.controls().enableZoom = false;
+  },[]);
+
   let dstlatitude = 100000;
   let dstlongitude = 100000;
   let srclatitude;
@@ -138,6 +143,8 @@ const Location = () => {
 
   useEffect(() => {
     if (currentMode === 2) {
+      globeEl.current.controls().enableRotate = false;
+      globeEl.current.controls().enableZoom = false;
       const storedSrcLatitude = localStorage.getItem('srclatitude');
       const storedSrcLongitude = localStorage.getItem('srclongitude');
       const storedDstLatitude = localStorage.getItem('dstlatitude');
@@ -151,6 +158,8 @@ const Location = () => {
       return () => clearTimeout(timeoutId);
     }
     if (currentMode === 3) {
+      globeEl.current.controls().enableRotate = false;
+      globeEl.current.controls().enableZoom = false;
       const storedSrcLatitude = parseFloat(localStorage.getItem('srclatitude'));
       const storedSrcLongitude = parseFloat(localStorage.getItem('srclongitude'));
       const storedDstLatitude = parseFloat(localStorage.getItem('dstlatitude'));
@@ -164,6 +173,8 @@ const Location = () => {
       return () => clearTimeout(timeoutId);
     }
     if (currentMode==4) {
+      globeEl.current.controls().enableRotate = false;
+      globeEl.current.controls().enableZoom = false;
       const storedSrcLatitude = parseFloat(localStorage.getItem('srclatitude'));
       const storedSrcLongitude = parseFloat(localStorage.getItem('srclongitude'));
       const storedDstLatitude = parseFloat(localStorage.getItem('dstlatitude'));
@@ -177,7 +188,8 @@ const Location = () => {
       return () => clearTimeout(timeoutId);
     }
     if (currentMode == 5) {
-      
+      globeEl.current.controls().enableRotate = false;
+      globeEl.current.controls().enableZoom = false;
       const timeoutId = setTimeout(() => {
         navigate('/delivery');
       }, 3500); 
