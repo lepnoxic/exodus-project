@@ -4,14 +4,14 @@
         "name": "Space Suit",
         "stock": 10,
         "price": 1000000,
-        "image": "/assets/space_suit_real.png"
+        "image": "assets/space_suit_real.png"
     },  
     {
         "id": 2,
         "name": "Toilet Paper",
         "stock": 0,
         "price": 30,
-        "image": "/assets/toilet_real.jpg"
+        "image": "assets/toilet_real1.jpg"
     },
     {
         "id": 3,
@@ -53,7 +53,7 @@
         "name": "Headphones",
         "stock": 13,
         "price": 1000,
-        "image": "/assets/headphones1_real.png"
+        "image": "assets/headphones1_real.png"
     },
     {
         "id": 9,
@@ -67,7 +67,7 @@
         "name": "3D Food Cartridge Pack",
         "stock": 1500,
         "price": 1000,
-        "image": "/assets/pack_real.jpg"
+        "image": "assets/pack_realv1.jpg"
     },
     {
         "id": 11,
