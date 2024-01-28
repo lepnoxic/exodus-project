@@ -10,6 +10,7 @@ function HomeGlobe({ width }) {
     globeE1.current.controls().autoRotate = true;
     globeE1.current.controls().autoRotateSpeed = 4;
     globeE1.current.controls().enableRotate = false;
+    globeE1.current.controls().enableZoom = false;
   },[]);
 
   useEffect(() => {
