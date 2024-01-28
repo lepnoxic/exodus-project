@@ -201,25 +201,27 @@ const Location = () => {
   if (currentMode === 0)
     return (
       <div className="flex flex-row overflow-x-hidden">
-        <div className='absolute flex flex-row items-center h-screen left-[10vw] text-7xl'>
-        <div className='flex flex-row items-center z-[2] gap-5'>
-          <div>
-            Choose your city: 
+        <div className='absolute flex flex-row items-center h-screen left-[10vw] text-6xl'>
+          <div className='flex flex-col justify-center z-[2] gap-10'>
+            <div>
+              Choose your city: 
+            </div>
+            <div className='flex flex-row gap-10'>
+              <select 
+                className="select select-bordered w-full max-w-xs" 
+                onChange={(e) => handleCitySelection(e)}
+                defaultValue="default"
+              >
+                <option value="default" disabled>Cities</option>
+                {locations.map((item, index) => (
+                  <option key={index} value={index}>{item.name}</option>
+                ))}
+              </select>
+              <button className='btn btn-success' onClick={() => handleCitySubmit()}>
+                SUBMIT
+              </button>
+            </div>
           </div>
-          <select 
-            className="select select-bordered w-full max-w-xs" 
-            onChange={(e) => handleCitySelection(e)}
-            defaultValue="default"
-          >
-            <option value="default" disabled>Select a city</option>
-            {locations.map((item, index) => (
-              <option key={index} value={index}>{item.name}</option>
-            ))}
-          </select>
-          <button className='btn btn-success' onClick={() => handleCitySubmit()}>
-            SUBMIT
-          </button>
-        </div>
         </div>
           <div className='flex-grow flex justify-center items-center' style={{ flex: '0 0 20%' }}>
           </div>
