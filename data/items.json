@@ -70,7 +70,7 @@
         "image": "/assets/pack_real.jpg"
     },
     {
-        "Id": 11,
+        "id": 11,
         "name": "Jetpack",
         "stock": 100,
         "price": 100000,

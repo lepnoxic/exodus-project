@@ -61,25 +61,25 @@ const Items = () => {
           <FaBullhorn className='-rotate-12'></FaBullhorn>
           <div className="relative flex overflow-x-hidden w-[65vw]">
             <div className="animate-marquee whitespace-nowrap">
-              <span className="mx-1">We are now delivering to Nemus. With this our services are available throughout the planet.</span>
-              <span className="mx-1">Taurus puts up bounty on alligators.</span>
-              <span className="mx-1">Canis Major distributes meat to avoid pineapple on pizza.</span>
-              <span className="mx-1">Ascella shuts down all its public toilets.</span>
-              <span className="mx-1">Lepus undergoes mass deforestation to promote global warming.</span>
-              <span className="mx-1">Akola is leading cure research.</span>
-              <span className="mx-1">Hackerman wins Exodus (hopefully).</span>
-              <span className="mx-1">Amogus is the highest rated game on oogleway.</span>
+              <span className="mx-20">We are now delivering to Nemus. With this our services are available throughout the planet.</span>
+              <span className="mx-20">Taurus puts up bounty on alligators.</span>
+              <span className="mx-20">Canis Major distributes meat to avoid pineapple on pizza.</span>
+              <span className="mx-20">Ascella shuts down all its public toilets.</span>
+              <span className="mx-20">Lepus undergoes mass deforestation to promote global warming.</span>
+              <span className="mx-20">Akola is leading cure research.</span>
+              <span className="mx-20">Hackerman wins Exodus (hopefully).</span>
+              <span className="mx-20">Amogus is the highest rated game on oogleway.</span>
             </div>
 
             <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-            <span className="mx-1">We are now delivering to Nemus. With this our services are available throughout the planet.</span>
-              <span className="mx-1">Taurus puts up bounty on alligators.</span>
-              <span className="mx-1">Canis Major distributes meat to avoid pineapple on pizza.</span>
-              <span className="mx-1">Ascella shuts down all its public toilets.</span>
-              <span className="mx-1">Lepus undergoes mass deforestation to promote global warming.</span>
-              <span className="mx-1">Akola is leading cure research.</span>
-              <span className="mx-1">Hackerman wins Exodus (hopefully).</span>
-              <span className="mx-1">Amogus is the highest rated game on oogleway.</span>
+            <span className="mx-20">We are now delivering to Nemus. With this our services are available throughout the planet.</span>
+              <span className="mx-20">Taurus puts up bounty on alligators.</span>
+              <span className="mx-20">Canis Major distributes meat to avoid pineapple on pizza.</span>
+              <span className="mx-20">Ascella shuts down all its public toilets.</span>
+              <span className="mx-20">Lepus undergoes mass deforestation to promote global warming.</span>
+              <span className="mx-20">Akola is leading cure research.</span>
+              <span className="mx-20">Hackerman wins Exodus (hopefully).</span>
+              <span className="mx-20">Amogus is the highest rated game on oogleway.</span>
             </div>
           </div>
         </div>

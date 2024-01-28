@@ -9,8 +9,8 @@ export default {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 25s linear infinite',
-        marquee2: 'marquee2 25s linear infinite',
+        marquee: 'marquee 50s linear infinite',
+        marquee2: 'marquee2 50s linear infinite',
       },
       keyframes: {
         marquee: {
