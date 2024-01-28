@@ -27,13 +27,13 @@ const Location = () => {
   }
 
   useEffect(() => {
-    fetch('/public/data/ne_110m_top_50_populated_cities.geojson')
+    fetch('../../data/ne_110m_top_50_populated_cities.geojson')
       .then(res => res.json())
       .then(({ features }) => setPlaces(features));
   }, []);
 
   const createArcs = (latitude, longitude) => {
-    fetch('/public/data/output.json')
+    fetch('../../data/output.json')
     .then(res => res.json())
     .then(({ coordinates }) => {
       const numberOfArcs = 20;
