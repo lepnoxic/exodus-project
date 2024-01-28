@@ -62,15 +62,15 @@ const SingleItem = ({ item, children }) => {
         </h2>
         <div className='flex flex-row items-center justify-between '>
           <div className='flex flex-col gap-2'>
-            <div>Stock: {item.stock} </div>
+            <div>Stock : {item.stock} </div>
             <div className='flex flex-row items-center gap-2'>
             <FaCoins size={20} /> {item.price}
             </div>
           </div>
-          <div className='flex flex-row items-center justify-center'>
-            <button className='btn btn-error w-2 rounded-none rounded-l-lg' onClick={handleDecrement}>-</button>
-            <div className='w-7 text-center text-lg bg-slate-800 h-12 flex justify-center items-center'>{count}</div>
-            <button className='btn btn-success w-2 rounded-none rounded-r-lg' onClick={handleIncrement}>+</button>
+          <div className='flex flex-row items-center justify-center text-white shadow-xl'>
+            <button className='btn btn-sm w-3 rounded-none rounded-l-lg ' onClick={handleDecrement}><p className='text-white'>-</p></button>
+            <div className='w-14 text-center text-lg bg-slate-700 '>{count}</div>
+            <button className='btn btn-sm w-3 rounded-none rounded-r-lg' onClick={handleIncrement}><p className='text-white'>+</p></button>
           </div>
         </div>
         {children}

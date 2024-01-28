@@ -5,7 +5,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 
 const App = () => {
   return (
-    <main className='bg-black w-[100vw] h-[100vh] flex flex-col'>
+    <main className='bg-black w-[100vw] h-[100vh] flex flex-col text-white'>
       <div>
         <ParticlesBackground></ParticlesBackground>
       </div>

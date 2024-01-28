@@ -17,7 +17,11 @@ const Delivery = () => {
 
     return (
         <div className='flex justify-center items-center w-screen h-screen flex-col'>
-            <div>Thank you for buying at Bluepyter Services</div>
+            <div className='text-4xl'>Thank you for buying at Bluepyter Services</div>
+            
+            <div>Destination : {localStorage.getItem('destination')}</div>
+            <div>Source : {localStorage.getItem('source')}</div>
+            {console.log(localStorage.getItem('cartItems'))}
 
             <div>
                 <button className='btn' onClick={handleItems}>
