@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 export default {
+  darkMode: 'class',
   mode: 'jit',
   content: [
     "./index.html",
@@ -25,4 +26,7 @@ export default {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes:["dark"],
+  },
 }
